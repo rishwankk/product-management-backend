@@ -11,7 +11,7 @@ const mediaRoutes = require('./routes/mediaRoutes');
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({origin: 'product-management-frontend-seven.vercel.app'}));
 app.use('/products', productRoutes);
 app.use('/categories', categoryRoutes);
 app.use('/materials', materialRoutes);
